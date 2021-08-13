@@ -2,8 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <AssemblyName>Store.Core.Caching</AssemblyName>
-        <RootNamespace>Store.Core.Caching</RootNamespace>
+        <AssemblyName>Caching</AssemblyName>
+        <RootNamespace>Caching</RootNamespace>
     </PropertyGroup>
 
 </Project>

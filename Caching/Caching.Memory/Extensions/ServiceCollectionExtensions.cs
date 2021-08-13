@@ -1,14 +1,20 @@
 using System;
+using Caching.Memory.Services;
 using Microsoft.Extensions.DependencyInjection;
-using Store.Core.Caching.Memory.Services;
 
-namespace Store.Core.Caching.Memory.Extensions
+namespace Caching.Memory.Extensions
 {
     public static class ServiceCollectionExtensions
     {
         public static void AddMemoryCaching(this IServiceCollection services, Action<MemoryCacheOptions> configureOptions)
         {
-            services.AddMemoryCache();
+            var memoryCacheOptions = new MemoryCacheOptions();
+            configureOptions(memoryCacheOptions); 
+            
+            services.AddMemoryCache(options =>
+            {
+                options.SizeLimit = memoryCacheOptions.SizeLimit;
+            });
             services.Configure(configureOptions);
             services.AddScoped<ICache, MemoryCache>();
         }
