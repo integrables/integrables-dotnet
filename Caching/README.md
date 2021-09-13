@@ -1,5 +1,12 @@
 # Caching
 
+A soft layer that makes caching ready to use in your application, that support both InMemory and Redis Caching. its uses the power of Abstraction to allow you change the caching mechanism without changing your application 
+
+The Directory contians three projects:
+1. The Abstraction project: used to inject the caching in your service, its a common layer.
+2. InMemory Caching
+3. Redis Caching 
+
 
 * Add InMemory Caching using DI.
 ```C#
