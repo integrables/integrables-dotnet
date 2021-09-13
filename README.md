@@ -9,6 +9,4 @@ Our vision is to have one place that most of the functionalites implementaions i
 
 ## Functionalites
 
-### 1. Caching
-
-Find out how could you use caching [here](https://github.com/integrables/integrables-dotnet/tree/master/Caching)
+### 1. [Caching](https://github.com/integrables/integrables-dotnet/tree/master/Caching)
